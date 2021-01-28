@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hernan Oficial</title>
+    
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--FONTS GOOGLE  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<nav class="nav-main">
+			<ul class="nav-menu">
+				<li> <a href="#">Introduction</a> </li>
+				<li> <a href="#">Web developments</a> </li>
+				<li> <a href="#">Research</a> </li>
+				<li> <a href="#">Tutorials</a> </li>
+				<li> <a href="#">General News</a> </li>
+				<li> <a href="#">Contact me</a> </li>
+			</ul>
+		</nav>
+		
+		<!-- Showcase -->
+		<header class="showcase">
+			<div class="opacidad">
+				<h2>About me...</h2>
+				<p>I like to be organized to make the most of my time. </p> 
+				<a href="#" class="btn">Read more <i class="fas fa-angle-double-right"></i></a>
+			</div>
+			
+		</header>
+		
+	</div>
+		
+	<div class="footer">
+		<p>
+		    <th:block th:text="${mensaje}"></th:block>
+		</p>
+	</div>
+
+</body>
+</html>
