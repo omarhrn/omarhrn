@@ -1,0 +1,324 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+
+body{
+	background: #fafafa;
+	color: #305641;
+	font-size: 16px;
+	font-family: 'Encode Sans', sans-serif;
+}
+
+a {
+	color: #186A3B;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+h2 {
+	color: #28B463;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	margin-top: 65px;
+}
+
+.iconMenu{
+	cursor: pointer;
+	padding: 15px 20px 5px 30px;
+	z-index: 1;
+}
+
+.iconMenuItem {
+  width: 35px;
+  height: 5px;
+  background-color: #186A3B;
+  margin: 6px 0;
+}
+	
+.menuIdioma{
+	display: inline-flex;
+	position: absolute;
+    top: 20px;
+    left: 90vw;
+}
+.btnIdioma {
+	cursor: pointer;
+ 	display: inline-block;
+ 	font-weight: bold;
+ 	color: black;
+ 	font-size: 8px;
+ 	margin: 5px 0px 30px 0px;
+}
+
+.btnIdioma:hover{
+ 	color: #239B56;
+}
+
+/*Navigation*/
+.nav-main{
+  font-size : 14px;
+  display: flex;
+  background-color: #1de9b6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	padding: 0px 0px 0px 30px;
+}
+
+.nav-menu li{
+	padding: 10px;
+	font-weight: bold;
+}
+
+.nav-menu li a:hover {
+	border-bottom: 2px solid #28B463;
+	font-size: 16px;
+	animation: coloredMenus 2s infinite;
+}
+
+@keyframes coloredMenus {
+   0% {top: 0px; left: 0px; color: #186a3b}
+  75% {top: 0px; left: 0px; color: red}
+  100% {top: 0px; left: 0px; color: #28B463}
+}
+
+/* SHOWCASE*/
+.showcase {
+	width: 100%;
+	height: 205px;
+	padding: 20px 50px 10px 100px;
+	margin-bottom: 20px;
+	background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../img/imagenApartadoSobreMi.jpg') no-repeat center center/cover;
+}
+
+.centrarInfo{
+	width: 80%;
+	height: 150px;
+	margin: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ .btn{
+ 	cursor: pointer;
+ 	display: inline-block;
+ 	border: 0;
+ 	font-weight: bold;
+ 	padding: 10px 20px;
+ 	background: white;
+ 	color: black;
+ 	font-size: 15px;
+ 	border: 1px solid white; 
+ 	margin: 10px 0;
+ 	
+ }
+ 
+ .btn:hover{
+ 	background: #a0a0a0;
+ }
+ 
+ .showcase h2, 
+ .showcase p {
+ 	margin-bottom: 10px;
+ }
+
+/*ANIMACIONEs*/
+.animation3S{
+  max-width: 90%;
+  position: relative;
+  animation: moverTitulos 2s infinite;
+}
+@keyframes moverTitulos {
+   0% {top: 0px; left: 0px; color: #186a3b}
+  75% {top: 0px; left: 0px; color: green}
+  100% {top: 0px; left: 0px; color: #186a3b}
+}
+/*LISTA EXPERIENCIAS*/
+.bloque-educacion{
+	margin-top: 5px;
+}
+.lista-experiencias{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 25px;
+	margin-top: 10px;
+}
+
+.experiencia{
+	color: #186a3b;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-top: 20px;
+}
+.experiencia a{
+	padding: 10px 0;
+	color: black;
+	text-transform: uppercase;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.experiencia a:hover{
+	text-decoration: underline;
+}
+
+.lista-estudios{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 25px;
+	margin-top: 10px;
+}
+.educacion{
+	border-bottom: 7px solid #76ad7d;
+    height: 90px;
+    display: grid;
+}
+.educacion a{
+	color:black;
+}
+.educacion a:hover{
+	text-decoration: underline;
+}
+
+.card{
+	width: 100%;
+	height: 350px;
+	flex-direction: column;
+	transition: 0.8s linear 0.2s;
+}
+.imagenEstudios{
+	background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../img/imagenApartadoEstudiar.jpg') center center/cover;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 25px;
+}
+
+.imagenExpUno{
+	background: radial-gradient(rgb(29, 233, 182,.1),rgba(255,255,255,.0) ), url("../img/Sopra_Steria_logo.svg");
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagenExpDos{
+	background: radial-gradient(rgb(29, 233, 182,.1), rgba(255,255,255,.0)), url("../img/peopletech-logo.PNG");
+   	background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagenExpTres{
+	background: radial-gradient(rgb(29, 233, 182,.1),rgba(255,255,255,.0) ), url("../img/BP-Logo-650x366.png");
+   	background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagenExpCuatro{
+	background: radial-gradient(rgb(29, 233, 182,.1),rgba(255,255,255,.0) ), url("../img/KeeltekLogo.PNG");
+   	background-repeat: no-repeat;
+    background-size: contain;
+}
+/*SOCIAL*/
+.social{
+	padding-top: 10px; 
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.links a{
+	margin: 0 15px;
+}
+
+.links a i{
+	font-size: 20px;
+}
+/* FOOTER*/
+.footer{
+	background: #2f3640;
+   	bottom: 0;
+   	width: 100%;
+   	text-align: center;
+}
+
+.footer section p{
+	font-size: 10px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+
+@media (max-width: 700px){
+
+	.nav-main ul.nav-menu {
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		background: #1de9b6c2;
+		padding: 50px 20px 20px 20px;
+		width: 150px;
+		height: 100vh;
+	}
+	.nav-main iconMenu{
+		padding: 10px 20px 5px 30px;
+	}
+	
+	.iconMenuItem:hover{
+		animation: coloredIconMenu 1s infinite;
+	}
+	
+	@keyframes coloredIconMenu {
+	   0% {top: 0px; left: 0px; background-color: #186a3b}
+	  30% {top: 0px; left: 0px; background-color: red}
+	  100% {top: 0px; left: 0px; background-color: #28B463}
+	}
+	
+	.btnIdioma{
+		color:#229c14;
+	}
+	
+	.showcase{
+	    padding: 10px 50px 50px 100px;
+	}
+	
+	.lista-experiencias{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.lista-estudios{
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.imagenEstudios{
+		display: flow-root;
+	}
+}

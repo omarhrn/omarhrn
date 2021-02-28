@@ -1,3 +1,4 @@
 com\hernan\ohrc\ServletInitializer.class
+com\hernan\ohrc\controller\IndexController.class
 com\hernan\ohrc\OhrcApplication.class
-controllers\IndexController.class
+com\hernan\ohrc\config\LocaleConfig.class

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Hernan Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="#{nombreWeb}"></title>
     
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -10,38 +11,135 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <script type="text/javascript" src="../js/includes.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div>
 		<nav class="nav-main">
+			<div class="iconMenu" onclick="iconMenuEventClick()">
+				<div class="iconMenuItem"></div>
+				<div class="iconMenuItem"></div>
+				<div class="iconMenuItem"></div>
+			</div>
 			<ul class="nav-menu">
-				<li> <a href="#">Introduction</a> </li>
-				<li> <a href="#">Web developments</a> </li>
-				<li> <a href="#">Research</a> </li>
-				<li> <a href="#">Tutorials</a> </li>
-				<li> <a href="#">General News</a> </li>
-				<li> <a href="#">Contact me</a> </li>
+				<li> <a href="#" th:text="#{introduccion}"></a> </li>
+				<li> <a href="#" th:text="#{modulo.desarrollosWeb}"></a> </li>
+				<li> <a href="#" th:text="#{modulo.investigacion}"></a> </li>
+				<li> <a href="#" th:text="#{modulo.tutoriales}"></a> </li>
+				<li> <a href="#" th:text="#{modulo.noticias}"></a> </li>
+				<li> <a href="#" th:text="#{modulo.contactame}"></a> </li>
 			</ul>
+			<div class="menuIdioma">
+				<a href="/?lang=ES" class="btnIdioma">ES</a>
+				<span>/</span>
+				<a href="/?lang=EN" class="btnIdioma">EN</a>
+			</div>
+			
+			
 		</nav>
+	</div>
+	
+	<div class="container">
 		
+
 		<!-- Showcase -->
 		<header class="showcase">
-			<div class="opacidad">
-				<h2>About me...</h2>
-				<p>I like to be organized to make the most of my time. </p> 
-				<a href="#" class="btn">Read more <i class="fas fa-angle-double-right"></i></a>
+			<div class="centrarInfo">
+				<h2 th:text="#{introduccion.sobremi}"></h2>
+				<p th:text="#{introduccion.sobremi.info}"></p> 
+				<a href="#" class="btn" th:text="#{introduccion.leermas}"><i class="fas fa-angle-double-right"></i></a>
 			</div>
 			
 		</header>
 		
+		<div>
+			<h2 class="animation3S" th:text="#{bloque.experiencia}"></h2>
+			<div class="lista-experiencias">
+			
+				<div class="experiencia card imagenExpUno">
+					<h4 th:text="#{experiencia.uno.titulo}"></h4>
+					<h6 th:text="#{experiencia.uno.fechas}"></h6>
+					<p th:text="#{experiencia.uno.info.simple}"></p>
+					<a href="#" th:text="#{introduccion.leermas}"><i class="fas fa-angle-double-right"></i></a>
+				</div>
+				<div class="experiencia card imagenExpDos">
+					<h4 th:text="#{experiencia.dos.titulo}"></h4>
+					<h6 th:text="#{experiencia.dos.fechas}"></h6>
+					<p th:text="#{experiencia.dos.info.simple}"></p>
+					<a href="#" th:text="#{introduccion.leermas}"><i class="fas fa-angle-double-right"></i></a>
+				</div>
+				<div class="experiencia card imagenExpTres">
+					<h4 th:text="#{experiencia.tres.titulo}"></h4>
+					<h6 th:text="#{experiencia.tres.fechas}"></h6>
+					<p th:text="#{experiencia.tres.info.simple}"></p>
+					<a href="#" th:text="#{introduccion.leermas}"><i class="fas fa-angle-double-right"></i></a>
+				</div>
+				<div class="experiencia card imagenExpCuatro">
+					<h4 th:text="#{experiencia.cuatro.titulo}"></h4>
+					<h6 th:text="#{experiencia.cuatro.fechas}"></h6>
+					<p th:text="#{experiencia.cuatro.info.simple}"></p>
+					<a href="#" th:text="#{introduccion.leermas}"><i class="fas fa-angle-double-right"></i></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="bloque-educacion">
+			<h2 class="animation3S" th:text="#{bloque.educacion}"></h2>
+			<div class="lista-estudios imagenEstudios">
+			
+				<div class="educacion centrarInfo">
+					<span><h6>2017 - 2018</h6><h4 th:text="#{educacion.master.titulo}"></h4></span>
+					<a href="http://www.upv.es/" target="_blank">UPV (Valencia)</a>
+					
+				</div>
+				<div class="educacion centrarInfo">
+					<span><h6>2012 - 2017</h6><h4 th:text="#{educacion.carrera.titulo}"></h4></span>
+					<a href="http://www.uji.es/" target="_blank">UJI (Castellón)</a>
+					
+				</div>
+				
+			</div>
+		</div>
+		
 	</div>
 		
 	<div class="footer">
-		<p>
-		    <th:block th:text="${mensaje}"></th:block>
-		</p>
+		<section class="social">
+			<div class="links">
+				<a href="https://www.linkedin.com/in/omar-rendonc/" target="_blank">
+					<i class="fab fa-linkedin-in"></i>
+				</a>
+				<a href="https://github.com/omarhrn" target="_blank">
+					<i class="fab fa-github"></i>
+				</a>
+			</div>
+			<p>
+			    <th:block th:text="#{introduccion.saludo}"></th:block>
+			</p>
+		</section>
 	</div>
 
+	<script type="text/javascript">
+		var iconMenu = document.getElementsByClassName("iconMenu")[0];
+		if (window.innerWidth < 700) {
+			iconMenu.hidden = false;				
+		}
+		else {
+			iconMenu.hidden = true;
+		}
+		
+		window.addEventListener('resize', function() {
+			if (window.innerWidth < 700) {
+				iconMenu.hidden = false;				
+			}
+			else {
+				iconMenu.hidden = true;
+			}
+		});
+		
+		
+	</script>
 </body>
 </html>
